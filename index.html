@@ -1,44 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Games</h1>
-    </header>
+  <header>
+    <img class="logo" src="./assets/logo.png.png" alt="Logo Gelp Games" />
+    <nav>
+      <a class="navbaritens" href="#inicial">Página Inicial</a>
+      <a class="navbaritens" href="#sobre">Sobre</a>
+      <a class="navbaritens" href="#games">Games</a>
+    </nav>
+  </header>
 
-    <div class="container">
-        <div class="card">
-            <img src="assets/Cyberpunk_2077_capa.png" alt="Cyberpunk 2077">
-            <h2>Cyberpunk 2077</h2>
-            <p>Linguagem de Programação: C++
-                Engine: REDengine (Desenvolvida internamente pela CD Projekt Red)</p>
-        </div>
+  <main id="inicial" class="container-fluid">
+    <section class="apresentacao">
+      <div class="descricao">
+        <h1>
+          Auxiliando em suas <br />
+          dúvidas sobre <span>programação</span> <br />
+          em jogos
+        </h1>
+        <p>
+          Tire sua dúvidas sobre quais linguagems os melhores jogos<br />
+          do momento foram criados e feitos.
+        </p>
+      </div>
+      <div class="image"><img src="./assets/header.png" alt="" /></div>
+    </section>
+  </main>
 
-        <div class="card">
-            <img src="assets/amongouos.jpeg" alt="Among Us">
-            <h2>Among Us</h2>
-            <p>Linguagem de Programação: Unity (C#)
-                Engine: Unity</p>
-        </div>
-
-        <div class="card">
-            <img src="assets/Valheim.jpg" alt="Valheim">
-            <h2>Valheim</h2>
-            <p>Linguagem de Programação: C#
-                Engine: Unity</p>
-        </div>
-
-        <div class="card">
-            <img src="assets/zelda.avif" alt="The Legend of Zelda: Breath of the Wild">
-            <h2>The Legend of Zelda: Breath of the Wild</h2>
-            <p>Linguagem de Programação: C++
-                Engine: Desenvolvida internamente pela Nintendo</p>
-        </div>
+  <section id="sobre" class="sobre">
+    <img src="./assets/pexels-lucie-liz-3165335.jpg" alt="" />
+    <div class="descricao-sobre">
+      <h1>
+        Não são apenas <span>informações</span>, <br />
+        mas a representatividade de cada <span>história</span>
+      </h1>
+      <p>
+        Somos uma empresa especializada em fornecer informações <br />
+        valiosas sobre as linguagens de programação utilizadas na criação de
+        jogos. <br />
+        Com uma paixão pelo universo dos games, nossa missão é servir como um
+        recurso fundamental para <br />
+        desenvolvedores, entusiastas e empresas que desejam entender melhor as
+        tecnologias por trás dos jogos.
+      </p>
     </div>
+  </section>
+
+  <a href="cyberpunk.html">
+    <section id="games" class="container">
+      <div class="card">
+        <img src="assets/Cyberpunk_2077_capa.png" alt="Cyberpunk 2077" />
+        <h2>Cyberpunk 2077</h2>
+        <p>
+          Linguagem de Programação: C++ Engine: REDengine (Desenvolvida
+          internamente pela CD Projekt Red)
+        </p>
+      </div>
+  </a>
+  
+<a href="amoung.html">
+  <div class="card">
+    <img src="assets/amongouos.jpeg" alt="Among Us" />
+    <h2>Among Us</h2>
+    <p>Linguagem de Programação: Unity (C#) Engine: Unity</p>
+  </div>
+</a>
+
+<a href="valheim.html">
+  <div class="card">
+    <img src="assets/Valheim.jpg" alt="Valheim" />
+    <h2>Valheim</h2>
+    <p>Linguagem de Programação: C# Engine: Unity</p>
+  </div>
+</a>
+
+<a href="zelda.html">
+  <div class="card">
+    <img src="assets/zelda.avif" alt="The Legend of Zelda: Breath of the Wild" />
+    <h2>The Legend of Zelda: Breath of the Wild</h2>
+    <p>
+      Linguagem de Programação: C++ Engine: Desenvolvida internamente pela
+      Nintendo
+    </p>
+  </div>
+</a>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Pedro e Thiago. Todos os direitos reservados.</p>
+  </footer>
 </body>
+
 </html>
