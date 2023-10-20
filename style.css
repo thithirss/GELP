@@ -101,22 +101,92 @@ span {
 
 .container {
     padding-top: 100px;
-    max-width: 1500px;
-    padding: 20px;
+    max-width: 2000px;
+    padding: 40px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
+
 
 .card {
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    margin: 20px;
+    box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 25px;
+    margin-right: auto;
+    padding: 30px;
+    width: 250px;
+    height: 330px;
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    color: #fff;
+}
+
+.card .card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    color: #fff;
+    border-radius: 10px;
     padding: 20px;
-    width: 300px;
+    text-align: center;
+}
+
+.card:hover .card-info {
+    display: block;
+}
+
+.card2 {
+    border-radius: 10px;
+    box-shadow: 5px 4px 12px rgba(0, 0, 0, 0.3);
+    margin: 25px;
+    margin-right: auto;
+    margin-left: 50%;
+    padding: 30px;
+    width: 250px;
     height: 450px;
     text-align: center;
     transition: transform 0.3s;
+
 }
+
 
 .card:hover {
     transform: scale(1.05);
@@ -130,7 +200,8 @@ span {
 
 .card p {
     font-size: 18px;
-    color: #fff
+    color: #fff;
+    display: flex;
 }
 
 img {
@@ -212,4 +283,66 @@ h1 {
     width: 50%;
     height: auto;
     object-fit: cover;
+}
+
+.celphone {
+
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .celphone .contato-pessoal {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .celphone h3 {
+    color: #ffcd00;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .celphone .number {
+    color: #fff;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .celphone a {
+    color: #0078d4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .celphone a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+    .descricao p {
+        font-size: 18px;
+        text-align: center;
+    }
+    .image {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    .descricao p {
+        font-size: 20px;
+    }
+    .apresentacao img {
+        width: 400px;
+    }
 }
