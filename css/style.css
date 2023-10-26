@@ -1,27 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400&display=swap");
-body {
-    font-family: "Open Sans", sans-serif, "Roboto", sans-serif;
-    background: linear-gradient(to right, #16050f, #051B44, #331B3B);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+:root{
+    --bg:linear-gradient(to right, #16050f, #051B44, #331B3B);
+    --text-color: #fff;
+    --bg-h1: #0e0e0e;
+    --bg-header:rgba(44, 1, 79, 0.5);
+
+    --bg-ligth:linear-gradient(to right, #ffffff, #f0f3fa, #f9f4f2);
+    --text-color-ligth: #20023e;
+    --bg-h1-ligth: #dbd8d8;
+
 }
 
 html{
     scroll-behavior: smooth;
 }
 
+
+body {
+    font-family: "Open Sans", sans-serif, "Roboto", sans-serif;
+    background: var(--bg);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation: ligth-to-dark 0.5 ease-in-out;
+}
+
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    color: #fff;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(44, 1, 79, 0.5);
+    background-color: var(--bg-header);
     height: 70px;
+}
+
+#mode-icon{
+    cursor: pointer;
+}
+
+#mode-icon:hover{
+    color: #fb00ff;;
 }
 
 .logo {
@@ -32,7 +56,7 @@ header {
 
 .navbaritens {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     margin: 5px;
     padding: 15px 25px;
 }
@@ -55,7 +79,7 @@ header {
 }
 
 .descricao h1 {
-    color: #fff;
+    color: var(--text-color);
     font-size: 45px;
     font-family: 'Roboto', sans-serif;
 }
@@ -65,7 +89,7 @@ header {
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    color: white;
+    color: var(--text-color);
 }
 
 span {
@@ -84,7 +108,7 @@ span {
 }
 
 .descricao-sobre h1 {
-    color: #fff;
+    color: var(--text-color);
     font-size: 35px;
     font-family: 'Roboto', sans-serif;
     margin-left: 25px;
@@ -94,7 +118,7 @@ span {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    color: white;
+    color: var(--text-color);
     margin-left: 25px;
 }
 
@@ -152,7 +176,7 @@ span {
 
 .card-back {
     transform: rotateY(180deg);
-    color: #fff;
+    color: var(--text-color);
 }
 
 .card .card-info {
@@ -163,7 +187,7 @@ span {
     height: 100%;
 
     display: none;
-    color: #fff;
+    color: var(--text-color);
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -195,12 +219,12 @@ span {
 .card h2 {
     font-size: 30px;
     margin-bottom: 12px;
-    color: #fff
+    color: var(--text-color);
 }
 
 .card p {
     font-size: 18px;
-    color: #fff;
+    color: var(--text-color);
     display: flex;
 }
 
@@ -211,16 +235,6 @@ img {
     border-radius: 10px;
 }
 
-footer {
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    font-size: 14px;
-}
-
-footer p {
-    margin: 0;
-}
 
 a {
     text-decoration: none;
@@ -228,62 +242,16 @@ a {
 
 h1 {
     font-size: 48px;
-    color: #ffcd00;
+    color: var(--text-color);
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    background-color: #0e0e0e;
+    background-color: var(--bg-h1);
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     margin: 20px 0;
 }
 
-.text-area {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    padding: 20px;
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    margin: 20px;
-}
-
-.text-area strong {
-    color: #ffcd00;
-}
-
-.text-area a {
-    color: #ffcd00;
-    text-decoration: none;
-}
-
-.text-area a:hover {
-    text-decoration: underline;
-}
-
-.slider-container {
-    width: 80%;
-    margin: 20px auto;
-    overflow: hidden;
-    position: relative;
-    border: 2px solid #ffcd00;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.slider {
-    display: flex;
-    transition: transform 0.5s;
-}
-
-.slider img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-}
 
 .celphone {
 
@@ -300,7 +268,7 @@ h1 {
   }
   
   .celphone h3 {
-    color: #ffcd00;
+    color: var(--text-color);
     font-size: 24px;
     margin-bottom: 20px;
   }
@@ -320,6 +288,42 @@ h1 {
   .celphone a:hover {
     text-decoration: underline;
   }
+
+footer {
+    color: var(--text-color);
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* COLOCANDO A FUNÇÃO LIGTH */
+
+.light{
+    background: var(--bg-ligth);
+    color: #150129;
+    animation: dark-to-ligth 0.5 ease-in-out;
+}
+
+.light p{
+    color: #150129;
+}
+
+.light h2{
+    color: #150129;
+}
+
+.light h3{
+    color: #150129;
+}
+
+.light .celphone p{
+    color: #150129
+}
 
   @media (max-width: 480px) {
     h1 {
@@ -345,4 +349,24 @@ h1 {
     .apresentacao img {
         width: 400px;
     }
+}
+
+@keyframes dark-to-ligth {
+    0%{
+        background-color: var(--bg);
+    }
+
+    100%{
+        background: var(--bg-ligth)
+    }
+}
+
+@keyframes ligth-to-dark {
+    0%{
+        background: var(--bg-ligth);
+    };
+
+    100%{
+          background-color: var(--bg);
+    };
 }
