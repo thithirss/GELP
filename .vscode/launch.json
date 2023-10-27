@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:\\Users\\thiagovicente\\Documents\\GitHub\\GELP\\index.html",
+            "url": "C:\\Users\\thiagovicente\\Desktop\\GELP\\GELP\\index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
